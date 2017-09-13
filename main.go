@@ -36,7 +36,7 @@ func main() {
 		log.Fatal("could not find channel")
 	}
 	
-	return s.ChannelMessageSend(id, *message)
+	s.ChannelMessageSend(id, *message)
 	
 }
 
