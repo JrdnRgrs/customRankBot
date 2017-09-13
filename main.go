@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"time"
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/nhooyr/color/log"
