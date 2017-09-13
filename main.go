@@ -36,14 +36,14 @@ func main() {
 	if id == "" {
 		log.Fatal("could not find channel")
 	}
-
-	for t := time.Tick(time.Duration(*interval) * time.Second); ; <-t {
-		if _, err := s.ChannelMessageSend(id, *message); err != nil {
-			log.Print(err)
-		} else {
-			log.Print("sent message")
-		}
+	
+	t := s.ChannelMessageSend(id, *message)
+	if err != nil {
+		log.Print(err)
+	} else {
+		log.Print("sent message")
 	}
+	
 }
 
 func findGuild(s *discordgo.Session) *discordgo.UserGuild {
