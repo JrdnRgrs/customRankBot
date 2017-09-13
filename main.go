@@ -36,12 +36,7 @@ func main() {
 		log.Fatal("could not find channel")
 	}
 	
-	t := s.ChannelMessageSend(id, *message)
-	if err != nil {
-		log.Print(err)
-	} else {
-		log.Print("sent message")
-	}
+	return s.ChannelMessageSend(id, *message)
 	
 }
 
